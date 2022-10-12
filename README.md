@@ -20,6 +20,7 @@ Used version of discord.js@12.5.3
 Usage of the bot requires several guild, channel, message, and user IDs to be configured
 Also certain roles with specific names need to be configured
 Bot was mostly designed with ONE server in mind, multiple servers will cause issues.
+
 To run you need to make a file called config.json in the base directory of the format:
 ```
 {
