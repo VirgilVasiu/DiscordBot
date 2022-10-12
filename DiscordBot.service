@@ -1,0 +1,10 @@
+[Unit]
+Description=DiscordBot
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/DiscordBot/startbot.sh >> /home/pi/DiscordBot/runlog.txt 2>&1
+
+[Install]
+WantedBy=multi-user.target
