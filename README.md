@@ -13,7 +13,6 @@ The bot's core features:
 * Maintain a leaderboard updated with simple commands
 * Can send and recieve DMs
 
-
 General information:
 Used version of discord.js@12.5.3
 
@@ -21,14 +20,32 @@ Usage of the bot requires several guild, channel, message, and user IDs to be co
 Also certain roles with specific names need to be configured
 Bot was mostly designed with ONE server in mind, multiple servers will cause issues.
 
-To run you need to make a file called config.json in the base directory of the format:
+## Running natively on Linux
+
+To run, rename `config.json.example` to `config.json` and edit the contents.
 ```
 {
 	"prefix": "!",
 	"token": "API_TOKEN"
 }
 ```
-Run with: node .
-or to debug: node --inspect .
-If you add the word "test" afterwords like so: node --inspect . test
-It will pull its prefix and token from configTest.json instead
+Start with: `node .`
+
+or debug with: `node --inspect`
+
+If you add the word "test" afterwords like so: `node --inspect . test`, it will pull its prefix and token from `configTest.json` instead
+
+## Running with Docker
+
+Rudimentary Docker support has been added.  To run this app as a container:
+
+1. Following the instructions above, configure options in `config.json`
+2. Build the container. 
+```shell
+docker build -t discord-bot .
+```
+3. Run the container.
+```shell
+docker run -it discord-bot --restart unless-stopped
+```
+Make sure to rebuild the container when changing configuration options.

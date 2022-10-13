@@ -1,0 +1,12 @@
+{
+	"name": "discordbot",
+	"version": "1.0.0",
+	"description": "https://github.com/VirgilVasiu/DiscordBot",
+	"main": "index.js",
+	"keywords": [],
+	"author": "VirgilVasiu",
+	"license": "UNLICENSED",
+    "dependencies": {
+        "discord.js": "latest"
+    }
+}
